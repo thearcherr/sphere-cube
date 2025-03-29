@@ -1,6 +1,5 @@
 import { OrbitControls } from '@react-three/drei'
-import { Bloom, EffectComposer, Glitch, Noise, Vignette } from '@react-three/postprocessing';
-import { BlendFunction } from 'postprocessing';
+import { Bloom, EffectComposer} from '@react-three/postprocessing';
 import * as THREE from 'three';
 
 function Experience()
@@ -10,14 +9,6 @@ function Experience()
         <color args={['#000']} attach={"background"} />
 
         <EffectComposer>
-            {/* <Vignette
-                offset={0.3}
-                darkness={0.9}
-                blendFunction={BlendFunction.NORMAL}
-            /> */}
-            {/* <Noise
-            blendFunction={BlendFunction.DARKEN}
-            /> */}
             <Bloom />
         </EffectComposer>
         <OrbitControls makeDefault />
